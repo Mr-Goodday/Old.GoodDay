@@ -1,0 +1,96 @@
+/*==========================================NEWSLETTER */
+
+#newsletter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 800px;
+    background-image: url(../Img/frontEndBanner.png), linear-gradient(to bottom, #ffffff44 62.5%, var(--color7) 62.6%);
+    backdrop-filter: blur(20px);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 40%;
+}
+
+#newsletter_form {
+    position: absolute;
+    top: 37.5%;
+    max-height: 100%;
+    width: calc(2480px / 3);
+    padding: 32px;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid var(--color9_op-80);
+    border-bottom: 0;
+    background-image: linear-gradient(to bottom, var(--color9_op-80) 0%, var(--color7) 50%);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow6);
+}
+
+#newsletter_form>.form>.label>p,
+#name,
+#MessageNewsletter {
+    width: 75%;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+
+.buttons>.submit {
+    width: 35%;
+}
+
+.reference {
+    width: unset;
+}
+
+/*==========================================NEWSLETTER DISPLAY */
+
+#newsletter_display {
+    position: relative;
+    display: grid;
+    height: auto;
+    width: 100%;
+    padding: 128px;
+    padding-top: 156px;
+    background-color: var(--color7);
+    background-image: linear-gradient(to bottom, var(--color7), var(--color6));
+    grid-template-columns: repeat(auto-fill, 512px);
+    grid-auto-rows: 256px;
+    gap: 32px;
+}
+
+#newsletter_display>h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--color1);
+    text-align: center;
+    transform: translate(-50%, 0);
+}
+
+.newsletter_display-grid_item {
+    background-color: var(--color6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 16px;
+    border-radius: 16px;
+    box-shadow: var(--shadow3);
+}
+
+.newsletter_display-grid_item>h3 {
+    width: 50%;
+    padding-bottom: 8px;
+    text-align: center;
+    border-bottom: 2px solid var(--color1);
+}

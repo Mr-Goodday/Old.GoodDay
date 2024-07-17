@@ -1,0 +1,320 @@
+/*==========================================HOME PAGE */
+
+#homePage {
+    position: relative;
+    height: 70vh;
+    background-image: linear-gradient(150deg, #ffffff44 70%, var(--color8) 70.1%);
+    backdrop-filter: blur(20px);
+}
+
+#homePage::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    bottom: 0px;
+    height: 500px;
+    width: 100vw;
+    background-image: linear-gradient(161deg, transparent 70%, var(--color7) 70.1%);
+}
+
+#homePage>img {
+    z-index: -1;
+    position: absolute;
+    scale: 250%;
+    top: 10%;
+    left: -10%;
+    animation: rotate 120s linear infinite;
+    filter: blur(1px);
+}
+
+#homePage>img:nth-child(2) {
+    scale: 100%;
+    top: -25%;
+    animation: rotate2 60s linear infinite;
+}
+
+#homePage>img:nth-child(3) {
+    scale: 150%;
+    top: 50%;
+    left: 20%;
+    animation: rotate2 90s linear infinite;
+}
+
+#homePage>.warper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 1000px;
+    padding-left: 10%;
+    gap: 20px;
+}
+
+#homePage>.warper>h2,
+#homePage>.warper>span {
+    max-width: 700px;
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+#homePage>.warper>span {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+/* #homePage>h2 {} */
+
+#homePage>.warper>.submit {
+    width: 150px;
+}
+
+/* .reference:hover {} */
+
+/*==========================================WHAT I DOING */
+
+#whatIDoing {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+    background-color: var(--color6);
+}
+
+#whatIDoing::after {
+    z-index: -5;
+    position: absolute;
+    transform: translate(0, -100%);
+    content: "";
+    top: 1px;
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(176deg, transparent 50%, var(--color6) 50.5%);
+}
+
+#whatIDoing>div {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20vw;
+    max-width: 300px;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--color7);
+    background-color: var(--color6);
+    filter: brightness(90%);
+    box-shadow: var(--shadow4);
+}
+
+.card>ion-icon {
+    aspect-ratio: 1;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    /* color: var(--color4); */
+    transform: translateY(+5px);
+}
+
+.card>h3 {
+    width: 100%;
+    text-align: center;
+    /* color: var(--color4); */
+    transform: translateY(+5px);
+}
+
+.card:hover {
+    box-shadow: none;
+    filter: none;
+}
+
+.card:hover>h3,
+.card:hover>ion-icon {
+    transform: translateY(-5px);
+}
+
+/*==========================================ABOUT ME */
+
+#aboutMe {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+    height: auto;
+    padding: 256px;
+    background-color: white;
+}
+
+#aboutMe_paper {
+    z-index: 2;
+    height: calc(3508px / 5.5);
+    width: calc(2480px / 5.5);
+    padding: 32px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: var(--shadow2);
+    transition: .5s;
+}
+
+#aboutMe:after,
+#aboutMe:before {
+    position: absolute;
+    z-index: -1;
+    top: 50;
+    left: 50;
+    content: " ";
+    height: calc(3508px / 5.5);
+    width: calc(2480px / 5.5);
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: var(--shadow2);
+    rotate: -5deg;
+    transition: .5s;
+}
+
+#aboutMe::before {
+    rotate: -10deg;
+}
+
+#aboutMe:hover::after {
+    rotate: 10deg;
+    box-shadow: var(--shadow2);
+}
+
+#aboutMe:hover::before {
+    rotate: 20deg;
+    box-shadow: var(--shadow2);
+}
+
+#aboutMe_paper>img {
+    aspect-ratio: 1;
+    width: 192px;
+    border-radius: 4px;
+}
+
+#aboutMe_textArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    gap: 32px;
+}
+
+#aboutMe_textArea>h2,
+#aboutMe_textArea>span {
+    color: #222;
+}
+
+#aboutMe_textArea>h2 {
+    padding: 0 32px;
+    border-bottom: 2px solid var(--color1);
+    text-align: center;
+}
+
+.line {
+    position: absolute;
+    z-index: -1;
+    width: 50vw;
+    height: 8px;
+    background: linear-gradient(45deg, var(--color3), var(--color1));
+    margin: 8px;
+    border-radius: 4px;
+    transition: .5s;
+    transform: scaleX(0);
+}
+
+.line:nth-child(1) {
+    top: 21%;
+    left: 7%;
+    rotate: 1deg;
+}
+
+.line:nth-child(2) {
+    top: 40%;
+    left: 30%;
+    rotate: -2deg;
+}
+
+.line:nth-child(3) {
+    top: 58%;
+    left: 20%;
+    rotate: 1deg;
+}
+
+.line:nth-child(4) {
+    top: 78%;
+    left: 35%;
+    rotate: 2deg;
+}
+
+#aboutMe:hover .line {
+    transform: scaleX(1);
+}
+
+/*==========================================NEWSLETTER */
+
+#newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 600px;
+    background-image: url(../Img/frontEndBanner.png), linear-gradient(to bottom, white 50%, var(--color8) 50%);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#newsletter_form {
+    max-height: 100%;
+    width: calc(2480px / 3);
+    padding: 32px;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid var(--color9_op-80);
+    border-bottom: 0;
+    background-image: linear-gradient(to bottom, var(--color9_op-80) 0%, var(--color8) 50%);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow6);
+}
+
+#newsletter_form>.form>.label>p,
+#name,
+#MessageNewsletter {
+    width: 75%;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+
+.buttons>.submit {
+    width: 35%;
+}
+
+.reference {
+    width: unset;
+}
+
+/*==========================================COŚ */
+
+#coś {
+    height: 800px;
+    background-color: var(--color7);
+    /* background-image: linear-gradient(to bottom, var(--color8) 0%, var(--color7) 35%); */
+}
